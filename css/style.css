@@ -1,3 +1,294 @@
+/* ==========================
+   VARIABLES DE STYLE
+=========================== */
+:root {
+    --primary-dark: #000000;
+    --primary-light: #FFFFFF;
+    --accent-orange: #EBA877;
+    --spacing-section: 60px;
+    --bp-mobile: 600px;
+    --bp-tablet: 900px;
+}
+
+/* ==========================
+   GLOBAL
+=========================== */
+* {
+    box-sizing: border-box;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+body {
+    margin: auto;
+    font-family: var(--font-main);
+    color: var(--primary-dark);
+    background-color: var(--primary-light);
+    line-height: 1.6;
+    position: relative;
+    z-index: 0;
+}
+
+h1 {
+    font-size: clamp(1.2rem, 2.2vw + 0.6rem, 2.5rem);
+    text-align: center;
+    margin-bottom: 30px;
+}
+h2 {
+    font-size: clamp(1.1rem, 1.3vw + 0.9rem, 1.75rem);
+}
+
+a {
+    color: var(--accent-orange);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+/* ==========================
+   HEADER & NAVIGATION
+=========================== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 35px;
+    border-bottom: 2px solid var(--primary-dark);
+    position: relative;
+    z-index: 100; /* au-dessus du watermark */
+}
+
+header img {
+    height: 80px;
+}
+
+/* Navigation Desktop */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 22px;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+nav a {
+    color: var(--primary-dark);
+    font-weight: bold;
+}
+
+
+
+/* ==========================
+   SECTIONS
+=========================== */
+section {
+    padding: var(--spacing-section) 25px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+
+
+#services ul {
+    padding-left: 20px;
+}
+
+
+
+
+
+/* ==========================
+   SLIDER
+=========================== */
+.slider-container {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    margin: 0 auto 30px auto;
+}
+
+.slider-container .slide {
+    display: none;
+    width: 100%;
+}
+
+.slider-container .slide.active {
+    display: block;
+}
+
+.slider-container .slide img {
+    width: 92%;
+    max-width: 700px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 6px;
+}
+
+.slider-container .prev,
+.slider-container .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(235,168,119,1);
+    color: #000000;
+    border: none;
+    width: 44px;
+    height: 44px;
+    font-size: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* ==========================
+   TABLEAU ADR
+=========================== */
+.adr-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border: 4px solid black;
+}
+
+.adr-table th,
+.adr-table td {
+    border: 2px solid black;
+    padding: 12px;
+    text-align: center;
+}
+
+.adr-table th {
+    background-color: #222;
+    color: white;
+}
+
+.adr-table tr.grise {
+    opacity: 0.6;
+    color: #666;
+}
+
+.adr-table tr.grise td {
+    color: #666;
+}
+
+.adr-table tr.grise img,
+.adr-table tr.grise svg {
+    filter: grayscale(100%) brightness(0.85);
+}
+
+.img-cell img,
+.img-cell svg {
+    display: block;
+    margin: 0 auto;
+}
+
+/* ==========================
+   TOOLBOX
+=========================== */
+.toolbox {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    background-color: #EBA877;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* ==========================
+   WATERMARK / LOGO FOND
+=========================== */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url("../images/logo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: clamp(220px, 45vw, 520px);
+    mix-blend-mode: multiply;
+    opacity: 0.12;
+    pointer-events: none;
+    z-index: 0;
+    filter: grayscale(100%) contrast(0.9);
+}
+
+
+/* ==========================
+   MEDIA QUERIES TABLETTE / MOBILE
+=========================== */
+@media (max-width: 900px) {
+    /* Tablet */
+    .content { padding: 18px; }
+    header { padding: 14px 20px; }
+    nav ul { gap: 16px; justify-content: center; }
+    header img { height: 64px; }
+}
+
+@media (max-width: 600px) {
+    /* Mobile */
+    .content { padding: 14px; }
+    header { padding: 12px 16px; flex-direction: row; align-items: center; justify-content: space-between; }
+    header img { height: 56px; margin: 0; }
+
+
+    /* Menu ouvert */
+    nav.open { right: 0; }
+
+    nav ul {
+        flex-direction: column;
+        gap: 20px;
+        padding-left: 20px;
+        margin: 0;
+    }
+
+    nav a {
+        font-size: 1.1rem;
+        padding: 10px 0;
+        color: var(--primary-dark);
+    }
+
+
+
+    /* Slider responsive */
+    .slider-container { max-width: 100%; }
+    .slider-container .slide img { width: 98%; max-width: none; }
+    .slider-container .prev, .slider-container .next { width: 38px; height: 38px; font-size: 22px; padding: 14px 16px; }
+
+    /* Sommaire toggle */
+    .sommaire-classique .sommaire-body { display: none; }
+    .sommaire-classique .sommaire-toggle { display: inline-block; }
+}
+
+
+
+/* Onglet actif dans le menu */
+nav ul li a.active {
+    background-color: #EBA877; 
+    color: #FFFFFF;             
+    padding: 8px 12px;         
+    border-radius: 4px; 
+    transition: background 0.3s ease;
+}
+
+
+
 /* --------------------------
    VARIABLES DE STYLE
 --------------------------- */
@@ -20,13 +311,10 @@ body {
     color: var(--primary-dark);
     background-color: var(--primary-light);
     line-height: 1.6;
+    align-items: center;
 }
 
-h1, h2, h3 {
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
+
 
 a {
     color: var(--accent-orange);
@@ -37,52 +325,6 @@ a:hover {
     text-decoration: underline;
 }
 
-/* --------------------------
-   HEADER & NAVIGATION
---------------------------- */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 35px;
-    border-bottom: 2px solid var(--primary-dark);
-}
-
-header img {
-    height: 80px;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 22px;
-    margin: 0;
-    padding: 0;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-nav a {
-    color: var(--primary-dark);
-    font-weight: bold;
-}
-
-/* --------------------------
-   SECTIONS
---------------------------- */
-section {
-    padding: var(--spacing-section) 25px;
-    max-width: 1000px;
-    margin: auto;
-}
-
-#accueil h1 {
-    font-size: 2rem;
-}
-
-#services ul {
-    padding-left: 20px;
-}
 
 /* --------------------------
    ACCENTS VISUELS
@@ -118,15 +360,6 @@ section, .content, .slider-container {
     width: 100%;
 }
 
-/* Fluid typography for headings */
-h1 {
-    font-size: clamp(1.2rem, 2.2vw + 0.6rem, 2.5rem);
-    text-align: center;
-    margin-bottom: 30px;
-}
-h2 {
-    font-size: clamp(1.1rem, 1.3vw + 0.9rem, 1.75rem);
-}
 
 /* Slider: responsive images and controls */
 .slider-container {
@@ -228,22 +461,6 @@ h2 {
     .sommaire-classique .sommaire-toggle { display: inline-block; }
 }
 
-/* Mobile: stack nav items and center them + hamburger support */
-
-.mobile-menu-toggle {
-    display: none;
-    border: none;
-    padding: 8px;
-    cursor: pointer;
-}
-.mobile-menu-toggle .bar {
-    display: block;
-    width: 22px;
-    height: 2px;
-    background: var(--primary-dark);
-    margin: 4px 0;
-    transition: transform .15s ease, opacity .15s ease;
-}
 
 
 
@@ -266,14 +483,13 @@ body::before {
     inset: 0;
     background-image: url("../images/logo.png");
     background-repeat: no-repeat;
-    background-position: center 15vh;
+    background-position: center 6vh;
     background-size: clamp(220px, 45vw, 520px);
     /* Blend so white parts don't show as a separate white block */
     mix-blend-mode: multiply;
     /* Emphasize orange and increase contrast slightly */
-    filter: saturate(1.9) sepia(0.25) hue-rotate(-8deg) contrast(1.06);
-    opacity: 0.16;
-    pointer-events: none;
+    filter: saturate(1.6) sepia(0.2) hue-rotate(-8deg) contrast(1.04);
+    opacity: 0.12;
     z-index: 0;
     filter: grayscale(100%) contrast(0.9);
 }
@@ -290,18 +506,6 @@ nav {
     z-index: 1;
 }
 
-
-
-/* Slightly less visible watermark on small screens */
-@media (max-width: 600px) {
-    body::before {
-        background-position: center 6vh;
-        opacity: 0.12;
-        background-size: clamp(160px, 50vw, 380px);
-        mix-blend-mode: multiply;
-        filter: saturate(1.6) sepia(0.2) hue-rotate(-8deg) contrast(1.04);
-    }
-}
 
 
 /* Tableau des catégories ADR */
@@ -359,12 +563,30 @@ body {
     filter: grayscale(100%) brightness(0.85);
 }
 
-/* Centrage des images dans leurs colonnes et alignement vertical */
-.adr-table td {
-    vertical-align: middle;
-}
-.img-cell img,
-.img-cell svg {
-    display: block;
-    margin: 0 auto;
+/* ==========================
+   MENU MOBILE SIMPLE
+=========================== */
+@media (max-width: 600px) {
+
+    /* Le menu reste visible */
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        position: static;      /* pas de menu caché */
+        width: 100%;
+        margin-top: 20px;
+        align-items: flex-start;
+    }
+
+    nav li {
+        width: 100%;
+    }
+
+    nav a {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+        font-size: 1.1rem;
+    }
 }
