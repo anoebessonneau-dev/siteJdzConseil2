@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/site.js"></script>
+    <link rel="icon" type="image/png" href="images/logo.png">
     <title>JDZ Conseil – Parcours</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -23,32 +25,35 @@
 
 <section id="parcours">
     <h1>Parcours professionnel</h1>
-    <p class="text-justify">Fort de plus de 40 ans d’expérience dans des métiers liés au transport routier de marchandises, j’ai acquis une connaissance approfondie du secteur et de ses contraintes. Ce parcours m’a permis de développer une expertise solide, à la fois technique, réglementaire et opérationnelle, en particulier dans le domaine du transport de marchandises dangereuses.</p>
-    <p class="text-justify">J’ai débuté ma carrière en tant que conducteur routier, avant d’exercer les fonctions d’exploitant en transport routier. Ces expériences de terrain m’ont permis de comprendre pleinement les réalités quotidiennes des entreprises de transport, tant sur le plan organisationnel que réglementaire.</p>
-    <p class="text-justify">Je me suis ensuite orienté vers la formation professionnelle, en intervenant au sein de différents organismes spécialisés dans le transport. Je cumule aujourd’hui plus de 30 ans d’expérience dans la formation des conducteurs de matières dangereuses. Formé expert en arrimage en 2013, j’accompagne également les conducteurs et les entreprises dans le cadre des formations continues obligatoires (FCO). En parallèle, je propose un accompagnement et des conseils réglementaires aux entreprises de transport routier.</p>
-    <p class="text-justify">En complément de mon activité dans la formation professionnelle, j’ai créé en 2005 une entreprise de conseil en qualité de Conseiller à la Sécurité pour le Transport de Marchandises Dangereuses (CSTMD), sous le statut de micro-entreprise. Cette activité me permet d’accompagner les entreprises dans le respect de leurs obligations réglementaires tout en tenant compte de leurs contraintes opérationnelles.</p>
-    <p class="text-justify">Mon rôle de conseiller sécurité en transport de marchandises dangereuses consiste à assurer la conformité réglementaire, la prévention des risques et la sécurité lors de la manipulation et du transport de substances dangereuses. J’adopte une approche pragmatique et adaptée au terrain, avec pour objectif de sécuriser les activités tout en facilitant la mise en conformité des entreprises.</p>
+    <div class="contourTexte">
+        <p class="text-justify">Fort de plus de 40 ans d’expérience dans des métiers liés au transport routier de marchandises, j’ai acquis une connaissance approfondie du secteur et de ses contraintes. Ce parcours m’a permis de développer une expertise solide, à la fois technique, réglementaire et opérationnelle, en particulier dans le domaine du transport de marchandises dangereuses.</p>
+        <p class="text-justify">J’ai débuté ma carrière en tant que conducteur routier, avant d’exercer les fonctions d’exploitant en transport routier. Ces expériences de terrain m’ont permis de comprendre pleinement les réalités quotidiennes des entreprises de transport, tant sur le plan organisationnel que réglementaire.</p>
+        <p class="text-justify">Je me suis ensuite orienté vers la formation professionnelle, en intervenant au sein de différents organismes spécialisés dans le transport. Je cumule aujourd’hui plus de 30 ans d’expérience dans la formation des conducteurs de matières dangereuses. Formé expert en arrimage en 2013, j’accompagne également les conducteurs et les entreprises dans le cadre des formations continues obligatoires (FCO). En parallèle, je propose un accompagnement et des conseils réglementaires aux entreprises de transport routier.</p>
+        <p class="text-justify">En complément de mon activité dans la formation professionnelle, j’ai créé en 2005 une entreprise de conseil en qualité de Conseiller à la Sécurité pour le Transport de Marchandises Dangereuses (CSTMD), sous le statut de micro-entreprise. Cette activité me permet d’accompagner les entreprises dans le respect de leurs obligations réglementaires tout en tenant compte de leurs contraintes opérationnelles.</p>
+        <p class="text-justify">Mon rôle de conseiller sécurité en transport de marchandises dangereuses consiste à assurer la conformité réglementaire, la prévention des risques et la sécurité lors de la manipulation et du transport de substances dangereuses. J’adopte une approche pragmatique et adaptée au terrain, avec pour objectif de sécuriser les activités tout en facilitant la mise en conformité des entreprises.</p>
+    </div>
     <br><br>
-    <p class="text-justify">Ma clientèle se compose majoritairement avec des artisans et des PME du transport routier de marchandises dangereuses, pour lesquels la souplesse et la disponibilité sont essentielles. Afin de m’adapter aux contraintes spécifiques des patrons-chauffeurs et des petites structures, je propose des interventions le samedi pour la réalisation des audits, des contrôles de conformité et des rendez-vous professionnels.</p>
-    <p class="text-justify">J’interviens principalement sur les régions Pays de la Loire et Nord de la Nouvelle-Aquitaine, en assurant un accompagnement de proximité adapté aux besoins des entreprises du territoire.</p>
-    
+    <div class="contourTexte">
+        <p class="text-justify">Ma clientèle se compose majoritairement avec des artisans et des PME du transport routier de marchandises dangereuses, pour lesquels la souplesse et la disponibilité sont essentielles. Afin de m’adapter aux contraintes spécifiques des patrons-chauffeurs et des petites structures, je propose des interventions le samedi pour la réalisation des audits, des contrôles de conformité et des rendez-vous professionnels.</p>
+        <p class="text-justify">J’interviens principalement sur les régions Pays de la Loire et Nord de la Nouvelle-Aquitaine, en assurant un accompagnement de proximité adapté aux besoins des entreprises du territoire.</p>
+    </div>   
 </section>
 
 
     <!-- Début du toolbox -->
 <div class="toolbox">
     <h3 style="text-align:center; margin-bottom:15px;">Informations de contact</h3>
-    <p align="center"><strong>49230 Sèvremoine</strong></p>
-    <p align="center"><strong>jdzconseil@gmail.com</strong></p>
-    <p align="center"><strong>07.67.62.65.42</strong></p>
-    <p align="center"><strong>02.41.30.35.24</strong></p>
+    <p align="center"><strong>49230 - Sèvremoine</strong></p>
+    <div class="contact-box" onclick="afficherContact()">
+        <strong>📩 Me contacter</strong>
+        <div id="contactInfo"></div>
+    </div>
 </div>
-<!-- Fin du toolbox -->
     <br><br><br>
 <br>
 
 <footer>
-    <p>© 2026 – JDZ Conseil</p>
+    <p>© 2026 – JDZ Conseil</p> /*le "©" indique que le contenue du site est protégé par des droits d'auteur*/
 </footer>
 
 </body>

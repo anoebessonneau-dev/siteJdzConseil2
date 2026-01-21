@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="google-site-verification" content="wj5NBDqHPLHp8GPN0iycd9rbTpr1Qsv9wubBb8iePDY" />
+    <script src="js/site.js"></script>
+    <link rel="icon" type="image/png" href="images/logo.png">
     <title>JDZ Conseil – Accueil</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -24,30 +26,33 @@
 
 <section id="accueil">
     <h1>Conseiller Sécurité – Transport de Matières Dangereuses</h1>
-    <p class="text-justify">Le conseiller à la sécurité pour le transport de marchandises dangereuses, accompagne les entreprises dans la gestion et la maîtrise des risques liés à leurs activités réglementées. Son rôle est d’aider ses clients à travailler en toute sécurité, dans le respect des exigences légales, tout en protégeant les personnes, les biens et l’environnement.</p>
-    <br>
-    <p class="text-justify">Le conseiller sécurité intervient comme référent sécurité et réglementaire auprès des entreprises qui expédient, transportent, chargent, déchargent ou manipulent des marchandises dangereuses. Il analyse vos pratiques, identifie les risques et vous propose des solutions concrètes et adaptées à votre activité. Son objectif est de transformer la réglementation en outils simples et opérationnels, au service de votre performance et de votre sécurité.</p>
-    <br>
-    <p class="text-justify">La désignation d’un conseiller sécurité est obligatoire pour de nombreuses entreprises, conformément aux réglementations en vigueur (ADR, RID, ADN). Cette obligation concerne aussi bien les PME que les grandes structures. Seul un conseiller certifié, vous permet de répondre pleinement à cette exigence réglementaire, que ce soit par une mission ponctuelle ou un accompagnement annuel, sans avoir à mobiliser de ressources internes.</p>
-    <br>
-    <p class="text-justify">Ses missions couvrent l’ensemble des obligations liées aux marchandises dangereuses : vérification de la conformité réglementaire de vos activités ; rédaction du rapport annuel obligatoire ; analyse des incidents et accidents, avec propositions d’actions correctives ; accompagnement lors des contrôles administratifs ; conseil technique et réglementaire au quotidien. Il agit en partenaire de confiance, au plus près de vos réalités terrain.</p>
-    <br><br><br>
+    <div class="contourTexte">
+        <p class="text-justify">Le conseiller à la sécurité pour le transport de marchandises dangereuses, accompagne les entreprises dans la gestion et la maîtrise des risques liés à leurs activités réglementées. Son rôle est d’aider ses clients à travailler en toute sécurité, dans le respect des exigences légales, tout en protégeant les personnes, les biens et l’environnement.</p>
+        <br>
+        <p class="text-justify">Le conseiller sécurité intervient comme référent sécurité et réglementaire auprès des entreprises qui expédient, transportent, chargent, déchargent ou manipulent des marchandises dangereuses. Il analyse vos pratiques, identifie les risques et vous propose des solutions concrètes et adaptées à votre activité. Son objectif est de transformer la réglementation en outils simples et opérationnels, au service de votre performance et de votre sécurité.</p>
+        <br>
+        <p class="text-justify">La désignation d’un conseiller sécurité est obligatoire pour de nombreuses entreprises, conformément aux réglementations en vigueur (ADR, RID, ADN). Cette obligation concerne aussi bien les PME que les grandes structures. Seul un conseiller certifié, vous permet de répondre pleinement à cette exigence réglementaire, que ce soit par une mission ponctuelle ou un accompagnement annuel, sans avoir à mobiliser de ressources internes.</p>
+        <br>
+        <p class="text-justify">Ses missions couvrent l’ensemble des obligations liées aux marchandises dangereuses : vérification de la conformité réglementaire de vos activités ; rédaction du rapport annuel obligatoire ; analyse des incidents et accidents, avec propositions d’actions correctives ; accompagnement lors des contrôles administratifs ; conseil technique et réglementaire au quotidien. Il agit en partenaire de confiance, au plus près de vos réalités terrain.</p>
+    </div>
+    <br><br>
 
-
-    <p class="text-justify">Jacques Debroize, conseiller sécurité depuis 2005 vous propose des prestations sur mesure, adaptées à votre secteur et à vos contraintes : audit de conformité, accompagnement à la mise en place de procédures, aide à la classification des marchandises dangereuses, assistance à l’étiquetage et à la documentation, ainsi que formation et sensibilisation de vos équipes. Sa pratique de CSTMD ainsi que la documentation fournie aux entreprises est en adéquation avec
-les attendus des administrations comme la DREAL qui contrôle les transporteurs. Son intervention peut être régulière ou ponctuelle, selon vos besoins.</p>
-    <p class="text-justify">Faire appel à ses services, c’est choisir un accompagnement professionnel, indépendant et rigoureux, pour sécuriser vos activités, rester conforme à la réglementation et travailler sereinement.</p>
+    <div class="contourTexte">
+        <p class="text-justify">Jacques Debroize, conseiller sécurité depuis 2005 vous propose des prestations sur mesure, adaptées à votre secteur et à vos contraintes : audit de conformité, accompagnement à la mise en place de procédures, aide à la classification des marchandises dangereuses, assistance à l’étiquetage et à la documentation, ainsi que formation et sensibilisation de vos équipes. Sa pratique de CSTMD ainsi que la documentation fournie aux entreprises est en adéquation avec
+    les attendus des administrations comme la DREAL qui contrôle les transporteurs. Son intervention peut être régulière ou ponctuelle, selon vos besoins.</p>
+        <p class="text-justify">Faire appel à ses services, c’est choisir un accompagnement professionnel, indépendant et rigoureux, pour sécuriser vos activités, rester conforme à la réglementation et travailler sereinement.</p>
+    </div>
     <br>
     
     <!-- Début du toolbox -->
 <div class="toolbox">
     <h3 style="text-align:center; margin-bottom:15px;">Informations de contact</h3>
-    <p align="center"><strong>49230 Sèvremoine</strong></p>
-    <p align="center"><strong>jdzconseil@gmail.com</strong></p>
-    <p align="center"><strong>07.67.62.65.42</strong></p>
-    <p align="center"><strong>02.41.30.35.24</strong></p>
+    <p align="center"><strong>49230 - Sèvremoine</strong></p>
+    <div class="contact-box" onclick="afficherContact()">
+        <strong>📩 Me contacter</strong>
+        <div id="contactInfo"></div>
+    </div>
 </div>
-<!-- Fin du toolbox -->
     
 
 <section id="slider">
@@ -85,9 +90,10 @@ document.addEventListener('DOMContentLoaded', function () {
     document.addEventListener('keydown', function(e){ if(e.key === 'ArrowRight') nextSlide(); if(e.key === 'ArrowLeft') prevSlide(); });
 });
 </script>
+<br><br>
 
 <footer>
-    <p>© 2026 – JDZ Conseil</p>
+    <p>© 2026 – JDZ Conseil</p> /*le "©" indique que le contenue du site est protégé par des droits d'auteur*/
 </footer>
 
 </body>
