@@ -2,8 +2,8 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="google-site-verification" content="wj5NBDqHPLHp8GPN0iycd9rbTpr1Qsv9wubBb8iePDY" />
-    <script src="js/site.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/site.js" defer></script> <!-- defer permet de charger le script après le chargement du DOM et permet d'éviter les bugs -->
     <link rel="icon" type="image/png" href="images/logo.png">
     <title>JDZ Conseil – Accueil</title>
     <link rel="stylesheet" href="css/style.css">
@@ -14,6 +14,10 @@
 <header>
     <img src="images/logo.png" alt="Logo JDZ Conseil">
 
+    <!-- Bouton burger (visible uniquement sur mobile) -->
+    <div class="menu-burger">☰</div>
+
+    <!-- Menu de navigation -->
     <nav id="main-nav">
         <ul>
             <li><a href="index.html" class="active">Conseiller sécurité</a></li>
@@ -23,6 +27,7 @@
         </ul>
     </nav>
 </header>
+
 
 <section id="accueil">
     <h1>Conseiller Sécurité – Transport de Matières Dangereuses</h1>
@@ -55,13 +60,13 @@
 </div>
     
 
-<section id="slider">
+<section id="slider" class="ordi-seulement">
     <div class="slider-container">
         <div class="slide">
-            <img src="images/6 - Coober Pedy - (7).JPG" alt="Photo de camion à Coober Pedy">
+            <img src="images/6 - Coober Pedy - (7).JPG" class="ordi-seulement" alt="Photo de camion à Coober Pedy">
         </div>
         <div class="slide">
-            <img src="images/6 - Coober Pedy - (8).JPG" alt="Photo de camion à Coober Pedy">
+            <img src="images/6 - Coober Pedy - (8).JPG" class="ordi-seulement" alt="Photo de camion à Coober Pedy">
         </div>
 
         <!-- Boutons -->

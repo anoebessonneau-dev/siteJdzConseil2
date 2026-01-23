@@ -50,7 +50,6 @@ header img {
     height: 80px;
 }
 
-/* Navigation Desktop */
 nav ul {
     list-style: none; /* car le menu est en mode liste donc ça permet d'enlever les puces */
     display: flex;
@@ -60,6 +59,10 @@ nav ul {
 nav a {
     color: #000000;
     font-weight: bold;
+}
+
+.menu-burger { /* Permet de faire en sorte que le menu burger ne s'affiche pas à d'autres moments que dans la version téléphone. Il est appelé dans la media query téléphone. */
+    display: none;
 }
 
 /* ==========================
@@ -109,40 +112,6 @@ section {
 #contactInfo {
     margin-top: 5px;
     font-weight: normal;
-}
-
-
-/* ==========================
-   RESPONSIVE DESIGN Tablette et mobile
-=========================== */
-@media (max-width: 900px) {
-    /* Tablette */
-    .content { padding: 18px; }
-    header { padding: 14px 20px; }
-    nav ul { gap: 16px; justify-content: center; }
-    header img { height: 64px; }
-}
-
-@media (max-width: 600px) {
-    /* Mobile */
-    .content { padding: 14px; }
-    header { padding: 12px 16px; flex-direction: row; align-items: center; justify-content: space-between; }
-    header img { height: 56px; margin: 0; }
-
-
-    /* Menu ouvert */
-    nav.open { right: 0; }
-
-    nav ul {
-        flex-direction: column;
-        gap: 20px;
-        padding-left: 20px;
-        margin: 0;
-    }
-
-    /* Sommaire toggle */
-    .sommaire-classique .sommaire-body { display: none; }
-    .sommaire-classique .sommaire-toggle { display: inline-block; }
 }
 
 
@@ -202,35 +171,6 @@ nav ul li a.active {
 
 
 
-/* ==========================
-   MENU MOBILE A REVOIR
-=========================== */
-@media (max-width: 600px) {
-
-    /* Le menu reste visible */
-    nav ul {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-        position: static; /* pas de menu caché */
-        width: 100%;
-        margin-top: 20px;
-        align-items: flex-start;
-    }
-
-    nav li {
-        width: 100%;
-    }
-
-    nav a {
-        display: block;
-        width: 100%;
-        padding: 10px 0;
-        font-size: 1.1rem;
-    }
-}
-
-
 /* --------------------------
    TABLEAU ADR
 --------------------------- */
@@ -271,4 +211,89 @@ body { /*Garde un peu d'espace autour du tableau*/
     text-align: center;
     font-size: 22px;
     font-weight: bold;
+}
+
+/* ==========================
+   RESPONSIVE DESIGN TABLETTE
+=========================== */
+@media screen and (max-width: 1024px) { /* S'applique aux écrans tablette */
+
+    section {
+        padding: 40px 60px; /* Réduit les marges latérales pour éviter le débordement */
+    }
+    header {
+        padding: 20px; /* Réduit l’espace interne du header */
+    }
+    .slider-container .prev {
+        left: 40px; /* Rapproche la flèche de l’image */
+    }
+    .slider-container .next {
+        right: 40px; /* Rapproche la flèche de l’image */
+    }
+}
+
+/* ==========================
+   RESPONSIVE DESIGN TELEPHONE
+=========================== */
+
+@media screen and (max-width: 768px) {
+
+    section.ordi-seulement { 
+        display: none !important; /* Pemret de cacher les images et le slider. Le "!important permet de le faire passer en priorité par rapport aux autres paramètres. */
+    }
+
+    /* ---------- MENU BURGER ---------- */
+
+    .menu-burger {
+        display: block; /* Affiche l’icône burger sur mobile */
+        font-size: 30px; /* Taille de l’icône burger */
+        cursor: pointer; /* Curseur cliquable */
+        margin-left: auto;           /* Pousse le burger complètement à droite */
+        align-self: center;          /* Centre verticalement dans le header */
+    }
+
+    nav ul {
+        display: none; /* Cache le menu classique */
+        flex-direction: column; /* Affiche les liens en colonne */
+        position: absolute; /* Sort le menu du flux normal */
+        top: 100%; /* Place le menu sous le header */
+        right: 0; /* Aligne le menu à droite */
+        background-color: #FFFFFF; /* Fond blanc */
+        width: 100%; /* Prend toute la largeur */
+        padding: 20px 0; /* Espace intérieur vertical */
+        border-bottom: 2px solid black; /* Séparation visuelle */
+    }
+
+    nav ul.menu-ouvert {
+        display: flex; /* Affiche le menu quand il est ouvert */
+    }
+
+    nav ul li {
+        text-align: center; /* Centre les liens */
+        margin: 10px 0; /* Espace entre les liens */
+    }
+
+    /* ---------- HEADER ---------- */
+
+    header {
+        position: relative; /* Permet le positionnement absolu du menu */
+    }
+
+    /* ---------- SECTIONS ---------- */
+
+    section {
+        padding: 30px 20px; /* Marges réduites pour petit écran */
+        font-size: 16px; /* Texte légèrement plus petit */
+    }
+
+
+    /* ---------- TABLEAU ADR ---------- */
+
+    .adr-table {
+        font-size: 14px; /* Réduit la taille du texte */
+    }
+    .adr {
+        width: 60px; /* Réduit la taille des pictogrammes */
+        height: 60px; /* Garde les proportions */
+    }
 }

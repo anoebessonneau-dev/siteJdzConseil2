@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/site.js" defer></script> <!-- defer permet de charger le script après le chargement du DOM et permet d'éviter les bugs -->
     <link rel="icon" type="image/png" href="images/logo.png">
     <title>JDZ Conseil – Classes ADR</title>
     <link rel="stylesheet" href="css/style.css">
@@ -12,7 +13,11 @@
 
 <header>
     <img src="images/logo.png" alt="Logo JDZ Conseil">
- 
+
+    <!-- Bouton burger (visible uniquement sur mobile) -->
+    <div class="menu-burger">☰</div>
+
+    <!-- Menu de navigation --> 
     <nav id="main-nav">
         <ul>
             <li><a href="index.html">Conseiller sécurité</a></li>

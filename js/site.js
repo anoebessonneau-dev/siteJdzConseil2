@@ -8,6 +8,11 @@ function afficherContact() {
         email + "<br>" + tel + "<br>" + tel2;
 }
 
-function menuBurger() {
 
-}
+
+const burger = document.querySelector('.menu-burger'); // Sélectionne l’icône burger
+const menu = document.querySelector('nav ul'); // Sélectionne le menu
+
+burger.addEventListener('click', () => { // Écoute le clic sur le burger
+    menu.classList.toggle('menu-ouvert'); // Ouvre ou ferme le menu
+});
