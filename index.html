@@ -14,10 +14,10 @@
 <header>
     <img src="images/logo.png" alt="Logo JDZ Conseil">
 
-    <!-- Bouton burger (visible uniquement sur mobile) -->
+    <!-- Bouton burger (visible uniquement sur téléphone) -->
     <div class="menu-burger">☰</div>
 
-    <!-- Menu de navigation -->
+    <!-- Menu -->
     <nav id="main-nav">
         <ul>
             <li><a href="index.html" class="active">Conseiller sécurité</a></li>
@@ -48,8 +48,8 @@
         <p class="text-justify">Faire appel à ses services, c’est choisir un accompagnement professionnel, indépendant et rigoureux, pour sécuriser vos activités, rester conforme à la réglementation et travailler sereinement.</p>
     </div>
     <br>
-    
-    <!-- Début du toolbox -->
+
+    <!-- Boite de contact toolbox -->
 <div class="toolbox">
     <h3 style="text-align:center; margin-bottom:15px;">Informations de contact</h3>
     <p align="center"><strong>49230 - Sèvremoine</strong></p>
@@ -76,7 +76,8 @@
 </section>
 
 <script>
-// Simple slider
+
+
 document.addEventListener('DOMContentLoaded', function () {
     const slides = document.querySelectorAll('.slider-container .slide');
     const prev = document.querySelector('.slider-container .prev');
@@ -91,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function () {
     show(0);
     next.addEventListener('click', nextSlide);
     prev.addEventListener('click', prevSlide);
-    // keyboard
+    
     document.addEventListener('keydown', function(e){ if(e.key === 'ArrowRight') nextSlide(); if(e.key === 'ArrowLeft') prevSlide(); });
 });
 </script>

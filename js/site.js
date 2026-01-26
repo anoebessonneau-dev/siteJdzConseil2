@@ -1,3 +1,4 @@
+//Boîte contact
 function afficherContact() {
     // Pemret que les données ne figurents pas dans le code html et qu'elles soient cachées
     const email = ["j","d","z","c","o","n","s","e","i","l","@","g","m","a","i","l",".","f","r"].join("");
@@ -9,10 +10,10 @@ function afficherContact() {
 }
 
 
-
+//Menu burger
 const burger = document.querySelector('.menu-burger'); // Sélectionne l’icône burger
 const menu = document.querySelector('nav ul'); // Sélectionne le menu
 
-burger.addEventListener('click', () => { // Écoute le clic sur le burger
+burger.addEventListener('click', () => {
     menu.classList.toggle('menu-ouvert'); // Ouvre ou ferme le menu
 });

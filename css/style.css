@@ -26,7 +26,7 @@ h2 {
     font-size: clamp(1.1rem, 1.3vw + 0.9rem, 1.75rem);
 }
 
-.contourTexte {
+.contourTexte { /* Pour encadrer des sections de textes en orange */
     display: inline-block; /* pour que la boîte s'adapte au texte */
     background-color: #EBA877;
     border: 1px solid #ccc;
@@ -163,11 +163,10 @@ nav ul li a.active {
     width: 44px;
     height: 44px;
     align-items: center;
-    border-radius: 50%; /* Boutons ronds */
+    border-radius: 50%; /* Arrondi les angles des images */
 }
 .slider-container .prev { left: 125px; } /* Placement de la flèche par rapport à l'image */
 .slider-container .next { right: 125px; } /* Placement de la flèche par rapport à l'image */
-
 
 
 
@@ -216,8 +215,7 @@ body { /*Garde un peu d'espace autour du tableau*/
 /* ==========================
    RESPONSIVE DESIGN TABLETTE
 =========================== */
-@media screen and (max-width: 1024px) { /* S'applique aux écrans tablette */
-
+@media screen and (max-width: 1024px) { 
     section {
         padding: 40px 60px; /* Réduit les marges latérales pour éviter le débordement */
     }
@@ -235,33 +233,31 @@ body { /*Garde un peu d'espace autour du tableau*/
 /* ==========================
    RESPONSIVE DESIGN TELEPHONE
 =========================== */
-
 @media screen and (max-width: 768px) {
 
     section.ordi-seulement { 
-        display: none !important; /* Pemret de cacher les images et le slider. Le "!important permet de le faire passer en priorité par rapport aux autres paramètres. */
+        display: none !important; /* Pemret de cacher les images et le slider. Le "!important" permet de le faire passer en priorité par rapport aux autres paramètres. */
     }
 
     /* ---------- MENU BURGER ---------- */
-
     .menu-burger {
         display: block; /* Affiche l’icône burger sur mobile */
-        font-size: 30px; /* Taille de l’icône burger */
+        font-size: 30px; 
         cursor: pointer; /* Curseur cliquable */
-        margin-left: auto;           /* Pousse le burger complètement à droite */
-        align-self: center;          /* Centre verticalement dans le header */
+        margin-left: auto; /* Met le menu à droite */
+        align-self: center; /* Centre verticalement dans le header */
     }
 
     nav ul {
-        display: none; /* Cache le menu classique */
-        flex-direction: column; /* Affiche les liens en colonne */
-        position: absolute; /* Sort le menu du flux normal */
+        display: none; /* Cache le menu normal */
+        flex-direction: column; 
+        position: absolute; 
         top: 100%; /* Place le menu sous le header */
         right: 0; /* Aligne le menu à droite */
-        background-color: #FFFFFF; /* Fond blanc */
-        width: 100%; /* Prend toute la largeur */
-        padding: 20px 0; /* Espace intérieur vertical */
-        border-bottom: 2px solid black; /* Séparation visuelle */
+        background-color: #FFFFFF;
+        width: 100%;
+        padding: 20px 0; /* Marges intérieur */
+        border-bottom: 2px solid black; /* Permet de faire une séparation visuelle */
     }
 
     nav ul.menu-ouvert {
@@ -270,30 +266,26 @@ body { /*Garde un peu d'espace autour du tableau*/
 
     nav ul li {
         text-align: center; /* Centre les liens */
-        margin: 10px 0; /* Espace entre les liens */
+        margin: 10px 0;
     }
 
     /* ---------- HEADER ---------- */
-
     header {
-        position: relative; /* Permet le positionnement absolu du menu */
+        position: relative;
     }
 
     /* ---------- SECTIONS ---------- */
-
     section {
-        padding: 30px 20px; /* Marges réduites pour petit écran */
+        padding: 30px 20px; /* Marges réduites */
         font-size: 16px; /* Texte légèrement plus petit */
     }
 
 
     /* ---------- TABLEAU ADR ---------- */
-
     .adr-table {
-        font-size: 14px; /* Réduit la taille du texte */
+        font-size: 16px; /* Texte légèrement plus petit */
     }
     .adr {
-        width: 60px; /* Réduit la taille des pictogrammes */
-        height: 60px; /* Garde les proportions */
-    }
+        width: 60px; /* Réduction de la taille des pictogrammes */
+        height: 60px;
 }
